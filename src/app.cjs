@@ -8,8 +8,8 @@ APP.set('port', 8080);
 
 // tell express that we want to use the www folder
 // for our static assets
-
-APP.use(express.static("www"));
+console.log(__dirname)
+APP.use(express.static(PATH.join(__dirname, process.argv.slice(2).shift() || '/')));
 
 // Listen for requests
 const SERVER = APP.listen(APP.get('port'), '0.0.0.0', function() {
