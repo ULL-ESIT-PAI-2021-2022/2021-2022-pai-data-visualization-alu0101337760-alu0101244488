@@ -1,6 +1,8 @@
+import { Chart, registerables } from '../../node_modules/chart.js/dist/chart.esm.js';
+Chart.register(...registerables);
 var ctx= document.getElementById("myChart").getContext("2d");
 var myChart= new Chart(ctx,{
-    type:"line",
+    type:"bar",
     data:{
         labels:['col1','col2','col3', 'col4'],
         datasets:[{
@@ -15,21 +17,6 @@ var myChart= new Chart(ctx,{
         }]
     },
     options:{
-        animations: {
-            tension: {
-                duration: 1000,
-                easing: 'linear',
-                from: 1,
-                to: 0,
-                loop: true
-            }
-        },
-        scales: {
-            y: { // defining min and max so hiding the dataset does not change scale range
-                min: 0,
-                max: 100
-            }
-        },
         responsive: true,
         maintainAspectRatio: false,
         scales:{
