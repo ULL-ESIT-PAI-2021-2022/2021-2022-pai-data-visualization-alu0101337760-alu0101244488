@@ -16,7 +16,7 @@ const config = {
   options: {
     animations: {
       tension: {
-        duration: 5000,
+        duration: 1500,
         easing: 'linear',
         from: 0.3,
         to: 0.1,
