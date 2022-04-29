@@ -1,4 +1,4 @@
-let ctx= document.getElementById("myChart").getContext("2d");
+let ctx = document.getElementById("myChart").getContext("2d");
 
 const data = {
   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -41,4 +41,4 @@ const config = {
   }
 };
 
-let myChart= new Chart(ctx, config);
+let myChart = new Chart(ctx, config);
