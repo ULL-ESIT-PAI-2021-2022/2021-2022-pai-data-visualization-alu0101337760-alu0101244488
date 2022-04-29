@@ -14,6 +14,15 @@ const config = {
   type: 'line',
   data: data,
   options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    },
     animations: {
       tension: {
         duration: 1500,
