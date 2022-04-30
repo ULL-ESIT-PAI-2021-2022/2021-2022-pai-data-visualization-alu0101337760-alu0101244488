@@ -23,7 +23,7 @@
  *       config file storing the configuration of the chart
  */
 
-import { config } from './config.js';
+import { CONFIG } from './config.js';
 import { Chart, registerables } from './../../../node_modules/chart.js/dist/chart.esm.js';
 Chart.register(...registerables);
 
@@ -31,4 +31,4 @@ Chart.register(...registerables);
  * @desc get context, creatte chart and display it using the configuration
  */
 const CTX = document.getElementById('myChart').getContext('2d');
-let myChart = new Chart(CTX, config);
+let myChart = new Chart(CTX, CONFIG);

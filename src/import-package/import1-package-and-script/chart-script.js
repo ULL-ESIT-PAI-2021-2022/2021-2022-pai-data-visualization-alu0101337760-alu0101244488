@@ -16,9 +16,7 @@
 
 'use strict';
 
-/** @desc Context of html element */
-const CTX = document.getElementById("myChart").getContext("2d");
-
+/** @desc Data to to fill the chart */
 
 /** @desc Structure of the dataset for the chart ot display */
 const DATA = {
@@ -31,30 +29,63 @@ const DATA = {
   }]
 };
 
-/** @desc Structure of the configuration and format of the chart */
-const CONFIG = {
-  type: 'line',
-  data: DATA,
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    animations: {
-      tension: {
-        duration: 1500,
-        easing: 'linear',
-        from: 0.3,
-        to: 0.1,
-        loop: true
-      }
-    },
-    scales: {
-      y: {
-        min: 0,
-        max: 100
+
+
+/** @desc Configuration of the chart */
+
+/** @desc Type of chart to represent */
+const TYPE = 'line';
+
+/** @desc Configuration of the animation of the chart */
+const ANIMATION = {
+  tension: {
+    duration: 1000,
+    easing: 'linear',
+    from: 0.3,
+    to: 0.1,
+    loop: true
+  }
+};
+
+/** @desc Configuration of the scale of the chart */
+const SCALE = {
+  y: {
+    min: 0,
+    max: 100
+  }
+};
+
+/** @desc Plugins allows to override the default attributes of the chart */
+const PLUGINS = {
+  legend: {
+    labels: {
+      font: {
+        size: 20
       }
     }
   }
 };
+
+/** @desc Option for the chart storing all the configurations */
+const OPTIONS = {
+  plugins: PLUGINS,
+  responsive: true,
+  maintainAspectRatio: false,
+  animations: ANIMATION,
+  scales: SCALE
+};
+
+/** @desc Structure of the configuration and format of the chart */
+const CONFIG = {
+  type: TYPE,
+  data: DATA,
+  options: OPTIONS
+};
+
+
+
+/** @desc Context of html element */
+const CTX = document.getElementById("myChart").getContext("2d");
 
 /** @desc create chart with context and configuration */
 let myChart = new Chart(CTX, CONFIG);

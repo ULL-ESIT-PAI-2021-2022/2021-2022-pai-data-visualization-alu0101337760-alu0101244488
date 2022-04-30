@@ -8,8 +8,8 @@
  * @author Enrique Viña Alonso <enrique.vina.29@ull.edu.es>
  * @since Apr 28 2022
  * 
- * @desc Configuration of the second example of the aemet dataset
- *       resizing the chart and font
+ * @desc Configuration of the fourth example of the aemet dataset
+ *       add a second dataset to compare with the first one
  *       
  * @see {@link https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-data-visualization-alu0101337760-alu0101244488}
  * @license GPLv3
@@ -33,11 +33,20 @@ const PLUGINS = {
   }
 };
 
+/** @desc Configuration of the scale of the chart */
+const SCALE = {
+  y: {
+    min: 0,
+    max: 25
+  }
+};
+
 /** @desc Option for the chart storing all the configurations */
 const OPTIONS = {
   plugins: PLUGINS,
   responsive: true,
-  maintainAspectRatio: false
+  maintainAspectRatio: false,
+  scales: SCALE
 };
 
 /** @desc Export configuration of the chart */

@@ -1,4 +1,10 @@
-const AEMET_TENERIFE_SUR =[ {
+/** 
+ * @module AEMET_TENERIFE_SOUTH  
+ * @desc Information from an AEMET station of climate 
+ *       in the Tenerife South airport
+ */
+
+export const AEMET_TENERIFE_SOUTH = [ {
   "fecha" : "2021-1",
   "indicativo" : "C429I",
   "p_max" : "18.6(07)",

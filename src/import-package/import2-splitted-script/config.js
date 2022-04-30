@@ -21,7 +21,7 @@
 import { DATA } from './setup.js';
 
 /** 
- * @desc Type of chart
+ * @desc Type of chart to represent
  * @see {@link https://https://www.chartjs.org/docs/latest/} to see all avalible types
  */
 const TYPE = 'bar';
@@ -32,6 +32,6 @@ export const CONFIG = {
   data: DATA,
   options: {
     responsive: true,
-    maintainAspectRatio: false,
+    maintainAspectRatio: false
   }
-}
+};

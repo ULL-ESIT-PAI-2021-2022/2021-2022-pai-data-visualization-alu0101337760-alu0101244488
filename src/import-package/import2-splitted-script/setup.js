@@ -16,19 +16,19 @@
 'use strict';
 
 /** @desc Name of each column */
-LABELS = ['col1', 'col2', 'col3', 'col4'];
+const LABELS = ['col1', 'col2', 'col3', 'col4'];
 
 /** @desc  data or value to represent on each column */
-VALUES = [10, 9, 15, 7];
+const VALUES = [10, 9, 15, 7];
 
 /** @desc Color of each column */
 // It is possible to use hex, rgb, rgba format
 const COLORS = [
-    'blue', 
-    'green',
-    'red',
-    'yellow' 
-]
+  'blue', 
+  'green',
+  'red',
+  'yellow' 
+];
 
 /** @desc Data structure to be exported and used in the chart */
 export const DATA = {

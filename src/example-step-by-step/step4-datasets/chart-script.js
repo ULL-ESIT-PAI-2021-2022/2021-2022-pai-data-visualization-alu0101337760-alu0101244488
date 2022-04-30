@@ -8,8 +8,8 @@
  * @author Enrique Viña Alonso <enrique.vina.29@ull.edu.es>
  * @since Apr 28 2022
  * 
- * @desc Third example importing data from an AEMET station
- *       add color to columns
+ * @desc Fourth example importing data from an AEMET station
+ *       add a second dataset to compare with the first one
  *       
  * @see {@link https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-data-visualization-alu0101337760-alu0101244488}
  * @license GPLv3
