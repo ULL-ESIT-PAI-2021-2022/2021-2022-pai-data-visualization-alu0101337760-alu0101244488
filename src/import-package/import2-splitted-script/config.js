@@ -24,11 +24,16 @@ import {DATA} from './setup.js';
  * @desc Type of chart to represent
  * @see {@link https://https://www.chartjs.org/docs/latest/} to see all avalible types
  */
-const TYPE = 'bar';   // can change to 'pie' chart easily
+const TYPE = 'bar';  // can change to 'pie' chart easily
 
 /** @desc Export configuartion of the chart */
 export const CONFIG = {
   type: TYPE,
   data: DATA,
-  options: {responsive: true, maintainAspectRatio: false}
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    y: {ticks: {font: {size: 40}}},
+    x: {ticks: {font: {size: 40}}}
+  }
 };

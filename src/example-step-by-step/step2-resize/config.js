@@ -7,29 +7,29 @@
  * @author Aram Pérez Dios <aram.perez.dios.04@ull.edu.es>
  * @author Enrique Viña Alonso <enrique.vina.29@ull.edu.es>
  * @since Apr 28 2022
- * 
+ *
  * @desc Configuration of the second example of the aemet dataset
  *       resizing the chart and font and adding axis labels
- *       
+ *
  * @see {@link https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-data-visualization-alu0101337760-alu0101244488}
  * @license GPLv3
  */
 
 'use strict';
 
-import { DATA } from './setup.js';
+import {DATA} from './setup.js';
 
 /** @desc Type of chart to represent */
 const TYPE = 'bar';
 
 /** @desc Configuration of the font for labels */
 const LABELS_FONT = {
-  size: 18 
+  size: 40
 };
 
 /** @desc Configuration of the font for labels */
 const TICKS_FONT = {
-  size: 16
+  size: 35
 };
 
 /** @desc Plugins allows to override the default attributes of the chart */
@@ -37,15 +37,9 @@ const PLUGINS = {
   title: {
     display: true,
     text: 'Days with rains each month of 2021 in Tenerife North Airport',
-    font: {
-      size: 22
-    }
+    font: {size: 22}
   },
-  legend: {
-    labels: {
-      font: LABELS_FONT
-    }
-  }
+  legend: {labels: {font: LABELS_FONT}}
 };
 
 /** @desc Configuration of the scale of the chart */
@@ -53,29 +47,15 @@ const SCALE = {
   y: {
     min: 0,
     max: 25,
-    title: {
-      display: true,
-      text: 'Days with rain',
-      padding: 15,
-      font: LABELS_FONT
-    },
-    ticks: {
-      font: TICKS_FONT
-    }
+    title:
+        {display: true, text: 'Days with rain', padding: 15, font: LABELS_FONT},
+    ticks: {font: TICKS_FONT}
   },
   x: {
-    title: {
-      display: true,
-      text: 'Month',
-      padding: 15,
-      font: LABELS_FONT
-    },
-    ticks: {
-      font: TICKS_FONT
-    }
+    title: {display: true, text: 'Month', padding: 15, font: LABELS_FONT},
+    ticks: {font: TICKS_FONT}
   }
 };
-
 
 
 
@@ -93,5 +73,3 @@ export let CONFIG = {
   data: DATA,
   options: OPTIONS
 };
-
-

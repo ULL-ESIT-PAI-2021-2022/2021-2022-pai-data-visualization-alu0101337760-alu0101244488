@@ -19,6 +19,9 @@
 /** @desc Context of html element */
 const CTX = document.getElementById('myChart').getContext('2d');
 
+
+Chart.defaults.font.size = 30;
+
 /** @desc create chart with context and configuration */
 let myChart = new Chart(CTX, {
   type: 'line',
@@ -35,7 +38,7 @@ let myChart = new Chart(CTX, {
     plugins: {
       legend: {
         labels: {
-          font: {size: 20},
+          font: {size: 50},
         },
       },
     },
@@ -51,77 +54,9 @@ let myChart = new Chart(CTX, {
       }
     },
     scales: {
-      y: {
-        min: 0,
-        max: 100,
-        ticks: {
-          font: {
-            size: 18
-          }
-        }
-      },
-      x: {
-        ticks: {
-          font: {
-            size: 18
-          }
-        }
-      }
+      y: {min: 0, max: 100, ticks: {font: {size: 40}}},
+      x: {ticks: {font: {size:40}}}
     }
   }
 });
 
-
-/** @desc Configuration of the font for labels */
-const LABELS_FONT = {
-  size: 18 
-};
-
-/** @desc Configuration of the font for labels */
-const TICKS_FONT = {
-  size: 16
-};
-
-/** @desc Plugins allows to override the default attributes of the chart */
-const PLUGINS = {
-  title: {
-    display: true,
-    text: 'Days with rain each month of 2021 in Tenerife in both airports',
-    font: {
-      size: 22
-    }
-  },
-  legend: {
-    labels: {
-      font: LABELS_FONT
-    }
-  }
-};
-
-/** @desc Configuration of the scale of the chart */
-const SCALE = {
-  y: {
-    min: 0,
-    max: 25,
-    title: {
-      display: true,
-      text: 'Days with rain',
-      padding: 15,
-      font: LABELS_FONT
-    },
-    ticks: {
-      font: TICKS_FONT
-    }
-  },
-  x: {
-    title: {
-      display: true,
-      text: 'Month',
-      padding: 15,
-      font: LABELS_FONT
-    },
-    ticks: {
-      font: TICKS_FONT
-    }
-  }
-};

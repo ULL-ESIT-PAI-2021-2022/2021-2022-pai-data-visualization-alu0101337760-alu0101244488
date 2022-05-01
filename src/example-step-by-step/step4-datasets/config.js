@@ -24,13 +24,14 @@ const TYPE = 'bar';
 
 /** @desc Configuration of the font for labels */
 const LABELS_FONT = {
-  size: 18 
+  size: 40
 };
 
 /** @desc Configuration of the font for labels */
 const TICKS_FONT = {
-  size: 16
+  size: 35
 };
+
 
 /** @desc Plugins allows to override the default attributes of the chart */
 const PLUGINS = {
