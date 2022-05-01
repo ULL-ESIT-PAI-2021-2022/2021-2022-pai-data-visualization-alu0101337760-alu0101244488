@@ -9,7 +9,7 @@
  * @since Apr 28 2022
  * 
  * @desc Configuration of the second example of the aemet dataset
- *       resizing the chart and font
+ *       resizing the chart and font and adding axis labels
  *       
  * @see {@link https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-data-visualization-alu0101337760-alu0101244488}
  * @license GPLv3
@@ -22,22 +22,69 @@ import { DATA } from './setup.js';
 /** @desc Type of chart to represent */
 const TYPE = 'bar';
 
+/** @desc Configuration of the font for labels */
+const LABELS_FONT = {
+  size: 18 
+};
+
+/** @desc Configuration of the font for labels */
+const TICKS_FONT = {
+  size: 16
+};
+
 /** @desc Plugins allows to override the default attributes of the chart */
 const PLUGINS = {
+  title: {
+    display: true,
+    text: 'Days with rains each month of 2021 in Tenerife North Airport',
+    font: {
+      size: 22
+    }
+  },
   legend: {
     labels: {
-      font: {
-        size: 22
-      }
+      font: LABELS_FONT
     }
   }
 };
+
+/** @desc Configuration of the scale of the chart */
+const SCALE = {
+  y: {
+    min: 0,
+    max: 25,
+    title: {
+      display: true,
+      text: 'Days with rain',
+      padding: 15,
+      font: LABELS_FONT
+    },
+    ticks: {
+      font: TICKS_FONT
+    }
+  },
+  x: {
+    title: {
+      display: true,
+      text: 'Month',
+      padding: 15,
+      font: LABELS_FONT
+    },
+    ticks: {
+      font: TICKS_FONT
+    }
+  }
+};
+
+
+
 
 /** @desc Option for the chart storing all the configurations */
 const OPTIONS = {
   plugins: PLUGINS,
   responsive: true,
-  maintainAspectRatio: false
+  maintainAspectRatio: false,
+  scales: SCALE
 };
 
 /** @desc Export configuration of the chart */
@@ -46,3 +93,5 @@ export let CONFIG = {
   data: DATA,
   options: OPTIONS
 };
+
+

@@ -9,7 +9,7 @@
  * @since Apr 28 2022
  * 
  * @desc Second example importing data from an AEMET station
- *       resizing the chart and font
+ *       resizing the chart and font and adding axis labels
  *       
  * @see {@link https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-data-visualization-alu0101337760-alu0101244488}
  * @license GPLv3

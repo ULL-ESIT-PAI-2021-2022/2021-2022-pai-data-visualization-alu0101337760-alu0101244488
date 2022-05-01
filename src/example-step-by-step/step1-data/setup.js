@@ -47,7 +47,7 @@ const MONTHS = [
 export const DATA = {
   labels: MONTHS,
   datasets: [{
-    label: 'Rain per month',
+    label: 'Days with rain',
     data: data
   }]
 };

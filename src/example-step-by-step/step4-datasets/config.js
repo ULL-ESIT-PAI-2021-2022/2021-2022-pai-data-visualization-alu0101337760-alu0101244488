@@ -22,13 +22,28 @@ import { DATA } from './setup.js';
 /** @desc Type of chart to represent */
 const TYPE = 'bar';
 
+/** @desc Configuration of the font for labels */
+const LABELS_FONT = {
+  size: 18 
+};
+
+/** @desc Configuration of the font for labels */
+const TICKS_FONT = {
+  size: 16
+};
+
 /** @desc Plugins allows to override the default attributes of the chart */
 const PLUGINS = {
+  title: {
+    display: true,
+    text: 'Days with rain each month of 2021 in Tenerife in both airports',
+    font: {
+      size: 22
+    }
+  },
   legend: {
     labels: {
-      font: {
-        size: 22
-      }
+      font: LABELS_FONT
     }
   }
 };
@@ -37,7 +52,27 @@ const PLUGINS = {
 const SCALE = {
   y: {
     min: 0,
-    max: 25
+    max: 25,
+    title: {
+      display: true,
+      text: 'Days with rain',
+      padding: 15,
+      font: LABELS_FONT
+    },
+    ticks: {
+      font: TICKS_FONT
+    }
+  },
+  x: {
+    title: {
+      display: true,
+      text: 'Month',
+      padding: 15,
+      font: LABELS_FONT
+    },
+    ticks: {
+      font: TICKS_FONT
+    }
   }
 };
 

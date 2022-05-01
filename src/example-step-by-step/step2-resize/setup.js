@@ -9,7 +9,7 @@
  * @since Apr 28 2022
  * 
  * @desc Data for the second example of the aemet dataset
- *       resizing the chart and font
+ *       resizing the chart and font and adding axis labels
  *       
  * @see {@link https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-data-visualization-alu0101337760-alu0101244488}
  * @license GPLv3
@@ -48,7 +48,7 @@ const MONTHS = [
 export const DATA = {
   labels: MONTHS,
   datasets: [{
-    label: 'Rain per month',
+    label: 'Days with rain',
     data: data
   }]
 };
