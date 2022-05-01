@@ -25,7 +25,7 @@ const DATA = {
     label: 'Looping tension',
     data: [65, 59, 80, 81, 26, 55, 40],
     fill: false,
-    borderColor: 'rgb(75, 192, 192)',
+    borderColor: 'darkCyan'
   }]
 };
 
@@ -47,11 +47,21 @@ const ANIMATION = {
   }
 };
 
-/** @desc Configuration of the scale of the chart */
+/** @desc Configuration of the axis of the chart */
 const SCALE = {
   y: {
+    title: {
+      display: true,
+      text: 'Y axis'
+    },
     min: 0,
     max: 100
+  },
+  x: {
+    title: {
+      display: true,
+      text: 'X axis'
+    }
   }
 };
 
